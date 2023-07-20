@@ -1,0 +1,76 @@
+/* Reset some browser defaults */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+/* Site-wide */
+header {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+/* Aside */
+aside {
+    flex: 1 1 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    text-align: center;
+}
