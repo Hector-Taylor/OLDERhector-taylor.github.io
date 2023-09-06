@@ -23,12 +23,23 @@
 
 <!-- Main Project Content -->
 <main>
-    <h1>Project Name</h1>
+    <h1>Crowd Analysis Computer Vision Pipeline</h1>
 
     <!-- Project Overview -->
     <section>
         <h2>Overview</h2>
-        <p>Project description and general overview goes here. This section can detail what the project is about, its purpose, and what problem it aimed to solve.</p>
+        <p>This project sought to investigate the topology of influence networks in crowds.  
+            Description of the experiment itself 
+            
+            For this project I trained a number of object detection models (I tried just about every one of them to nail down a performant option)
+            and then used the detections to track the movement of people in the scene.  I then used the tracks to build a graph of the scene and
+            used the graph to compute a number of metrics that describe the topology of the scene. 
+
+            This project was one of my first forays into machine learning and computer vision.
+
+            Ironically, since this project has launched Meta has shipped a number of open source CV models which can accomplish the goals of this pipeline, 
+            but I'm still proud of this and it was a hell of a lot of fun to figure out. 
+        </p>
     </section>
 
     <!-- Project Date & Collaborators -->
@@ -36,10 +47,10 @@
         <h2>Details</h2>
         <dl>
             <dt>Date:</dt>
-            <dd>Month Year (e.g., January 2023)</dd>
+            <dd>Month Year (e.g., August 2022-present)</dd>
 
             <dt>Collaborators:</dt>
-            <dd>Collaborator Name 1, Collaborator Name 2, etc.</dd>
+            <dd>Kei Yoshida, James 'Ben' Falandays, Bill Warren</dd>
         </dl>
     </section>
 
@@ -49,14 +60,14 @@
         <figure>
             <figcaption>Project Video</figcaption>
             <video controls width="100%">
-                <source src="path/to/your/video.mp4" type="video/mp4">
+                <source src="tracked_1118_T15_filtered.mov" type="video/mov">
                 Your browser does not support the video tag.
             </video>
         </figure>
 
         <figure>
             <figcaption>Project GIF</figcaption>
-            <img src="path/to/your/gif.gif" alt="Description of the GIF">
+            <img src="FOV_1118_T4_Leaders.gif" alt="Description of the GIF">
         </figure>
     </section>
 
