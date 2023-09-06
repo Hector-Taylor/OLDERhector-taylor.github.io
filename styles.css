@@ -118,14 +118,14 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: ##ffffb0; /* Light gray background for contrast */
+    background-color: #ffffb0; /* Light gray background for contrast */
     padding: 20px 0;
 }
 
 nav img.header-image {
-    width: auto;
+    width: 100%; /* Ensures the image scales properly */
     height: auto;
-    margin-bottom: 20px; /* space between the image and the links */
+    margin-bottom: 10px; /* space between the image and the links */
 }
 
 nav ul {
