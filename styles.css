@@ -1,6 +1,6 @@
 /* Basic styling */
 body {
-    background-color: #FFFF88;
+    background-color: #ffffb0;
     transition: background-color .3s;
     font-family: Arial, sans-serif; /* Use a default font for consistency */
     display: flex;
