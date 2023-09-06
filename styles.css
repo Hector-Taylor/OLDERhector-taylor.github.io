@@ -3,10 +3,6 @@ body {
     background-color: #ffffb0;
     transition: background-color .3s;
     font-family: Arial, sans-serif; /* Use a default font for consistency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* viewport height */
     margin: 0;
 }
 
@@ -111,9 +107,9 @@ footer {
 footer {
     width: 100%;
     background-color: #ffffb0;
-    color: #f5f5f5;
+    color: #ffffb0;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 /* Updated Navigation Styles */
@@ -158,4 +154,17 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #007BFF;
     color: #fff;
+}
+
+/* Flexbox grid for projects */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allows the project boxes to wrap to the next line */
+    justify-content: center; /* Centers the boxes horizontally */
+    gap: 20px; /* Gives space between the project boxes */
+}
+
+.project {
+    width: calc(33.33% - 40px); /* Width of each box. 33.33% makes 3 boxes in a row. Subtracting 40px for margin */
+    margin: 20px; /* Space around each box */
 }
