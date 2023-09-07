@@ -1,6 +1,6 @@
 /* Basic styling */
 body {
-    background-color: #ffffb0;
+    background-color: #CFAB62;
     transition: background-color .3s;
     font-family: Arial, sans-serif; /* Use a default font for consistency */
     margin: 0;
@@ -50,11 +50,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #000000;
 }
 
 .project, section, aside {
-    background-color: #ffffff;
+    background-color: #EFDEBE; 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
