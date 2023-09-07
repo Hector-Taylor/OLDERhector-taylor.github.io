@@ -1,3 +1,10 @@
+/* Adding new font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Basic styling */
 body {
     background-color: #CFAB62;
@@ -43,13 +50,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #333333;
     text-transform: uppercase;
     transition: color .3s;
     text-decoration: none;
 }
 
 nav ul li a:hover {
+    transform: scale(1.05);
     color: #000000;
 }
 
@@ -75,7 +83,7 @@ nav ul li a:hover {
 }
 
 /*footer {
-    background-color: #333;
+    background-color: #333333;
     color: #f5f5f5;
     text-align: center;
     padding: 20px 0;
@@ -123,8 +131,8 @@ nav ul li a:hover {
 /* Adjusted footer */
 footer {
     width: 100%;
-    background-color: #ffffb0;
-    color: #ffffb0;
+    background-color: #FFFFB0;
+    color: #FFFFB0;
     text-align: center;
     padding: 10px 0;
 }
@@ -135,7 +143,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #ffffb0; /* Light gray background for contrast */
+    background-color: #FFFFB0; /* Light gray background for contrast */
     padding: 20px 0;
 }
 
@@ -161,17 +169,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #333333;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 15px 30px;
     text-decoration: none;
-    transition: background-color .3s, color .3s;
+    transition: background-color .3s, color .3s, transform .3s;
     border-radius: 5px;
 }
 
 nav ul li a:hover {
+    transform: scale(1.05);
     background-color: #007BFF;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* Flexbox grid for projects */
@@ -184,5 +193,5 @@ main {
 
 .project {
     width: calc(33.33% - 40px); /* Width of each box. 33.33% makes 3 boxes in a row. Subtracting 40px for margin */
-    margin: 20px; /* Space around each box */
+    margin: 30px; /* Space around each box */
 }
