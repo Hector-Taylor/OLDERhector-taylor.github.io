@@ -10,14 +10,14 @@
     <body>
         <!-- Navigation bar will be the same across all pages -->
         <header>
-            <nav>
-                <img src="path-to-header-image.jpg" alt="Header Description" class="header-image">
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div id="nav-placeholder"></div>
+            <script>
+            fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').outerHTML = data;
+            });
+            </script>  
             <h1>Welcome to my website Bozo</h1>
             <p>Thanks for stopping by. Drop me a line for any reason whatsoever. Or don't!</p>
         </header>

@@ -11,14 +11,14 @@
 <body>
 <!-- Navigation bar will be the same across all pages -->
 <header>
-<nav><h2>Navigation</h2>
-<img alt="Header Description" class="header-image" src="Coffee-Run.jpeg"/>
-<ul>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+    <div id="nav-placeholder"></div>
+        <script>
+        fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').outerHTML = data;
+        });
+        </script>  
 <h1>Me, me, and me</h1>
 </header>
 <!-- Main content of the page -->
