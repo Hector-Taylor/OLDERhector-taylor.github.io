@@ -43,3 +43,21 @@
 <a href="Warren(2006)_DynamicsOfPandA.pdf" target="_blank">Download My CV</a>
 </body>
 </html>
+<script>
+    function rotateNavItems() {
+      const numItems = document.querySelectorAll('#nav-placeholder nav ul li').length;
+      let rotation = 0;
+      document.querySelectorAll('#nav-placeholder nav ul li').forEach((item, index) => {
+        rotation = 360 / numItems * index;
+        item.style.transform = `rotate(${rotation}deg) translateY(-150px)`;
+      });
+    }
+  
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').outerHTML = data;
+        rotateNavItems();
+      });
+  </script>
+  

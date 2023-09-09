@@ -22,16 +22,6 @@
       transform-origin: 50% 0;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const numItems = document.querySelectorAll('nav ul li').length;
-      let rotation = 0;
-      document.querySelectorAll('nav ul li').forEach((item, index) => {
-        rotation = 360 / numItems * index;
-        item.style.transform = `rotate(${rotation}deg) translateY(-150px)`;
-      });
-    });
-  </script>
 <nav>
     <img src="bg_option.png" alt="Header Description" class="header-image">
     <ul>
