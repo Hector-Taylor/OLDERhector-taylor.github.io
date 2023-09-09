@@ -41,20 +41,21 @@
     <!-- Place the script here, right before the closing </body> tag -->
     <script>
         function rotateNavItems() {
-            const numItems = document.querySelectorAll('#nav-placeholder nav ul li').length;
-            let rotation = 0;
-            document.querySelectorAll('#nav-placeholder nav ul li').forEach((item, index) => {
-                rotation = 360 / numItems * index;
-                item.style.transform = `rotate(${rotation}deg) translateY(-150px)`;
-            });
+          const numItems = document.querySelectorAll('#nav-placeholder nav ul li').length;
+          let rotation = 0;
+          document.querySelectorAll('#nav-placeholder nav ul li').forEach((item, index) => {
+            rotation = 360 / numItems * index;
+            item.style.transform = `rotate(${rotation}deg)`;
+          });
         }
-
+      
         fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').outerHTML = data;
-                rotateNavItems();
-            });
-    </script>
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('nav-placeholder').outerHTML = data;
+            rotateNavItems();
+          });
+      </script>
+      
 </body>
 </html>
