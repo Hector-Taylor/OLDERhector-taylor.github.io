@@ -1,15 +1,10 @@
-/* Adding new font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
-}
-
-/* Basic styling */
-body {
-    background-color: #CFAB62;
+    background-color: #EEEDE7;
     transition: background-color .3s;
-    font-family: Arial, sans-serif; /* Use a default font for consistency */
+    font-family: Arial, sans-serif;
     margin: 0;
 }
 
@@ -24,18 +19,20 @@ body:after {
     position: fixed;
     z-index: -1;   
 }
+
 a {
-    text-decoration: none; /* Removes underline */
-    color: inherit; /* Inherits color from parent, so it doesn't change to blue */
+    text-decoration: none;
+    color: #868B8E;
 }
 
 .project {
-    cursor: pointer; /* Changes the cursor to a hand when hovering over a project, indicating it's clickable */
+    cursor: pointer;
 }
 
 h1, h2, h3 {
     text-transform: uppercase;
     text-align: center;
+    color: #868B8E;
 }
 
 nav ul {
@@ -43,6 +40,7 @@ nav ul {
     justify-content: center;
     list-style-type: none;
     padding: 0;
+    background-color: #B9B7BD;
 }
 
 nav ul li {
@@ -50,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333333;
+    color: #868B8E;
     text-transform: uppercase;
     transition: color .3s;
     text-decoration: none;
@@ -58,11 +56,11 @@ nav ul li a {
 
 nav ul li a:hover {
     transform: scale(1.05);
-    color: #000000;
+    color: #EEEDE7;
 }
 
 .project, section, aside {
-    background-color: #EFDEBE; 
+    background-color: #E7D2CC;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -74,28 +72,21 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px auto;  /* 10px vertical margin, centered horizontally */
+    margin: 10px auto;
 }
-
 
 .project:hover, section:hover, aside:hover {
     box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
 }
 
-/*footer {
-    background-color: #333333;
-    color: #f5f5f5;
-    text-align: center;
-    padding: 20px 0;
+footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-}*/ 
+    background-color: #B9B7BD;
+    color: #868B8E;
+    text-align: center;
+    padding: 10px 0;
+}
 
-
-/* Responsive design with media queries */
-
-/* Tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     nav ul {
         flex-direction: column;
@@ -107,7 +98,6 @@ nav ul li a:hover {
     }
 }
 
-/* Desktop devices */
 @media only screen and (min-width: 901px) {
     body {
         flex-direction: row;
@@ -116,49 +106,37 @@ nav ul li a:hover {
     }
 }
 
-/* Modular Image & GIF Spaces */
 .image-container, .gif-container {
     max-width: 100%;
-    margin: 20px 0; /* Adds space above and below the image/GIF */
+    margin: 20px 0;
 }
 
 .image-container img, .gif-container img {
-    width: 100%;  /* Ensures the image/GIF scales properly */
-    height: auto;
-    border-radius: 8px; /* Optional: gives images a rounded corner */
-}
-
-/* Adjusted footer */
-footer {
     width: 100%;
-    background-color: #FFFFB0;
-    color: #FFFFB0;
-    text-align: center;
-    padding: 10px 0;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Updated Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #FFFFB0; /* Light gray background for contrast */
+    background-color: #B9B7BD;
     padding: 20px 0;
 }
 
 nav img.header-image {
-    width: 200px; /* Ensures the image scales properly */
+    width: 200px;
     height: 200px;
-    margin-bottom: 10px; /* space between the image and the links */
-
+    margin-bottom: 10px;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 600px; /* Adjust based on your design preference */
+    max-width: 600px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -169,7 +147,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333333;
+    color: #868B8E;
     text-transform: uppercase;
     padding: 15px 30px;
     text-decoration: none;
@@ -183,15 +161,14 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-/* Flexbox grid for projects */
 main {
     display: flex;
-    flex-wrap: wrap; /* Allows the project boxes to wrap to the next line */
-    justify-content: center; /* Centers the boxes horizontally */
-    gap: 20px; /* Gives space between the project boxes */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project {
-    width: calc(33.33% - 40px); /* Width of each box. 33.33% makes 3 boxes in a row. Subtracting 40px for margin */
-    margin: 30px; /* Space around each box */
+    width: calc(33.33% - 40px);
+    margin: 30px;
 }
