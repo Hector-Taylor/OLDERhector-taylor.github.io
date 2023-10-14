@@ -12,8 +12,7 @@
         <div id="nav-placeholder"></div>
         <h1>HELLO</h1>
         <p>WELCOME TO MY DOMAIN.</p>
-        <p>That is a joke about the internet.</p>
-        <p>I hope that joke didn't upset you.</p>
+        <p></p>
         <p>Please take a moment to enjoy my website. You can read about me, my work, what I think about. It'll be worth your time! Maybe!</p>
     </header>
 
@@ -21,39 +20,25 @@
         <section id="about">
             <h2>About Me</h2>
             <p>Placeholder for information about Hector.</p>
-            <img src="hector.jpg" alt="Picture of Hector Taylor">
-        </section>
-        <section id="blog">
-            <h2>My Blog</h2>
-            <article>
-                <h3>Blog Post 1</h3>
-                <p>Placeholder for blog post content.</p>
-                <time datetime="2023-01-01">Posted on January 1, 2023</time>
-            </article>
+            <img src="images/hector.jpg" alt="Picture of Hector Taylor">
         </section>
     </main>
-
-    <aside>
-        <h2>News & Updates</h2>
-        <p>Placeholder for news and updates.</p>
-    </aside>
     <script>
-        function rotateNavItems() {
-          const numItems = document.querySelectorAll('#nav-placeholder nav ul li').length;
-          let rotation = 0;
-          document.querySelectorAll('#nav-placeholder nav ul li').forEach((item, index) => {
-            rotation = 360 / numItems * index;
-            item.style.transform = `rotate(${rotation}deg)`;
-          });
+        document.addEventListener("DOMContentLoaded", function() {
+            loadNav();
+        });
+    
+        function loadNav() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("nav-placeholder").innerHTML = this.responseText;
+                }
+            };
+            xhr.open("GET", "nav.html", true);
+            xhr.send();
         }
-      
-        fetch('nav.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('nav-placeholder').outerHTML = data;
-            rotateNavItems();
-          });
-      </script>
-      
+    </script>
+    
 </body>
 </html>

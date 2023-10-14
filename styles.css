@@ -1,128 +1,41 @@
+/* === IMPORTS AND GLOBAL STYLES === */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #EEEDE7;
-    transition: background-color .3s;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Using Roboto as the first choice, otherwise Arial, sans-serif */
+    background-color: #dac966;
     margin: 0;
+    transition: background-color .3s;
 }
 
 body:after {
     content: "";
     background: url(bg-pattern.png) repeat;
     opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
     position: fixed;
     z-index: -1;   
 }
 
+/* === TYPOGRAPHY === */
 a {
     text-decoration: none;
     color: #868B8E;
 }
 
-.project {
-    cursor: pointer;
-}
-
 h1, h2, h3 {
     text-transform: uppercase;
     text-align: center;
-    color: #868B8E;
+    color: #507389;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    background-color: #B9B7BD;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #868B8E;
-    text-transform: uppercase;
-    transition: color .3s;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    transform: scale(1.05);
-    color: #EEEDE7;
-}
-
-.project, section, aside {
-    background-color: #E7D2CC;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    transition: box-shadow .2s;
-    margin: 15px;
-}
-
-.project-gif {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-.project:hover, section:hover, aside:hover {
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
-}
-
-footer {
-    width: 100%;
-    background-color: #B9B7BD;
-    color: #868B8E;
-    text-align: center;
-    padding: 10px 0;
-}
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (min-width: 901px) {
-    body {
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-    }
-}
-
-.image-container, .gif-container {
-    max-width: 100%;
-    margin: 20px 0;
-}
-
-.image-container img, .gif-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
+/* === NAVIGATION STYLES === */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #B9B7BD;
+    background-color: #baa6e3;
     padding: 20px 0;
 }
 
@@ -140,6 +53,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    background-color: #B9B7BD;
 }
 
 nav ul li {
@@ -161,14 +75,78 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
+/* === PROJECTS AND SECTIONS STYLES === */
+.project {
+    cursor: pointer;
+    width: calc(33.33% - 40px);
+    margin: 30px;
+}
+
+.project, section, aside {
+    background-color: #f37e5d;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: box-shadow .2s;
+    margin: 15px;
+}
+
+.project-gif {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.project:hover, section:hover, aside:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+}
+
+/* === FOOTER STYLES === */
+footer {
+    width: 100%;
+    background-color: #a688e3;
+    color: #868B8E;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* === MEDIA QUERIES AND RESPONSIVENESS === */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+/* === IMAGE AND GIF STYLES === */
+.image-container, .gif-container {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.image-container img, .gif-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* === MAIN LAYOUT === */
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-.project {
-    width: calc(33.33% - 40px);
-    margin: 30px;
 }
