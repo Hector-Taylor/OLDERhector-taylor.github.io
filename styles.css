@@ -1,152 +1,88 @@
-/* === IMPORTS AND GLOBAL STYLES === */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif; /* Using Roboto as the first choice, otherwise Arial, sans-serif */
-    background-color: #dac966;
+/* Reset and base styles */
+* {
     margin: 0;
-    transition: background-color .3s;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-body:after {
-    content: "";
-    background: url(bg-pattern.png) repeat;
-    opacity: 0.1;
-    top: 0; left: 0; bottom: 0; right: 0;
-    position: fixed;
-    z-index: -1;   
+/* Use a more professional color scheme */
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
 }
 
-/* === TYPOGRAPHY === */
-a {
-    text-decoration: none;
-    color: #868B8E;
-}
-
-h1, h2, h3 {
-    text-transform: uppercase;
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    color: #507389;
 }
 
-/* === NAVIGATION STYLES === */
-nav {
+/* Navigation styles, if navigation is added later */
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #baa6e3;
-    padding: 20px 0;
+    padding: 1rem 0;
 }
-
-nav img.header-image {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 600px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #B9B7BD;
-}
-
 nav ul li {
-    margin: 0;
+    padding: 0 1rem;
 }
-
-nav ul li a {
-    color: #868B8E;
-    text-transform: uppercase;
-    padding: 15px 30px;
+nav a {
+    color: white;
     text-decoration: none;
-    transition: background-color .3s, color .3s, transform .3s;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    transform: scale(1.05);
-    background-color: #007BFF;
-    color: #FFFFFF;
+/* Main content styles */
+main {
+    padding: 2rem;
+    background: white;
+    margin: 1rem auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* === PROJECTS AND SECTIONS STYLES === */
-.project {
-    cursor: pointer;
-    width: calc(33.33% - 40px);
-    margin: 30px;
-}
-
-.project, section, aside {
-    background-color: #f37e5d;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    transition: box-shadow .2s;
-    margin: 15px;
-}
-
-.project-gif {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-.project:hover, section:hover, aside:hover {
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
-}
-
-/* === FOOTER STYLES === */
+/* Footer styles */
 footer {
-    width: 100%;
-    background-color: #a688e3;
-    color: #868B8E;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
-/* === MEDIA QUERIES AND RESPONSIVENESS === */
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+/* Utility classes for spacing and alignment */
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .container,
+    main {
+        width: 95%;
+        padding: 1rem;
+    }
     nav ul {
         flex-direction: column;
-        align-items: center;
+        padding: 0;
     }
-    
     nav ul li {
-        margin-bottom: 10px;
+        padding: 0.5rem 0;
     }
-}
-
-@media only screen and (min-width: 901px) {
-    body {
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-    }
-}
-
-/* === IMAGE AND GIF STYLES === */
-.image-container, .gif-container {
-    max-width: 100%;
-    margin: 20px 0;
-}
-
-.image-container img, .gif-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* === MAIN LAYOUT === */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
